@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Hiragino Maru Gothic Pro", "BIZ UDGothic", "Noto Sans Mono",
+    sans-serif;
+
+  --bg-color: #fff;
+  --fg-color: #000;
+  --accent-color: #f92672;
+
+  background: var(--bg-color);
+  color: var(--fg-color);
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  @apply p-2 px-4 text-2xl font-bold border-b border-gray-300;
+}
+
+button {
+  @apply p-2 rounded-lg bg-gray-300 text-black
+    hover:brightness-110 active:brightness-90;
+}
+
+.btn-accent {
+  @apply bg-[var(--accent-color)] text-white font-bold;
+}
+
+.btn-safe {
+  @apply bg-green-500 text-white font-bold;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white font-bold;
+}
+
+textarea,
+input {
+  @apply focus:outline-none border border-gray-300 rounded-lg transition-colors p-2 hover:border-blue-500 focus:border-blue-500;
+}
+
+textarea {
+  min-height: 10rem;
+}
+
+input {
+  @apply p-1;
+}
